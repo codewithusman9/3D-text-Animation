@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>3D Text Effect</title>
+</head>
+<style>
+.wrapper {
+	perspective: 1000px;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #222;
+  }
+  
+  .text {
+	font-size: 5rem;
+	color: #fff;
+	position: relative;
+	transform-style: preserve-3d;
+	animation: pop-out 1s ease forwards;
+  }
+  
+  @keyframes pop-out {
+	0% {
+	  transform: translateZ(-200px) rotateX(90deg);
+	  opacity: 0;
+	}
+	100% {
+	  transform: translateZ(0) rotateX(0deg);
+	  opacity: 1;
+	}
+  } 
+</style>
+<body>
+<div class="wrapper">
+    <h1 class="text">3D Text Effect</h1>
+</div>
+</body>
+</html>
